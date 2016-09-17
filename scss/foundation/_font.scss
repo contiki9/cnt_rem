@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/font/NotoSansCJKjp-Regular.eot");
+  src: url("assets/font/NotoSansCJKjp-Regular.eot?#iefix") format("embedded-opentype"), url("assets/font/NotoSansCJKjp-Regular.woff") format("woff"), url("assets/font/NotoSansCJKjp-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 700;
+  src: url("assets/font/NotoSansCJKjp-Bold.eot");
+  src: url("assets/font/NotoSansCJKjp-Bold.eot?#iefix") format("embedded-opentype"), url("assets/font/NotoSansCJKjp-Bold.woff") format("woff"), url("assets/font/NotoSansCJKjp-Bold.ttf") format("truetype");
+}
+
+
+body,html{
+  color: $text;
+  @include MXfont-family;
+}
+h1, h2, h3, h4, h5, h6{
+  @include MXfont-family;
+}
+

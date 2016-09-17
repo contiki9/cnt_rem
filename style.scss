@@ -1,0 +1,104 @@
+@charset "utf-8";
+/*
+Theme Name: cnt_rem
+Theme URI: http://cnt_rem.blog.cntlog.net/
+Author: the conti
+Author URI: http://blog.cntlog.net/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, left-sidebar, custom-background, custom-colors, custom-header, custom-menu
+Text Domain: cnt_rem
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/* ==========================================================================
+   Foundation
+   ========================================================================== */
+/*---------------------------------------------------------------------
+# assets
+-----------------------------------------------------------------------*/
+/* mixIn
+   ---------------------------------------------------------- */
+@import "assets/scss/vendor/bourbon/_bourbon";
+@import "assets/scss/vendor/neat/_neat";
+@import "assets/scss/_mixin.scss";
+@mixin MXfont-family{
+  font-family: "Noto Sans", "Noto Sans CJK JP","Noto Sans Japanese", sans-serif;
+}
+@mixin MXsideSpace{
+  @include padding(null 2%);
+}
+
+@mixin MXcontent_wrap{
+  @include padding(3% 3%);
+  border: 1px solid $border;
+}
+
+/* Base
+   ---------------------------------------------------------- */
+@import "assets/scss/vendor/skeleton/_skeleton.scss";
+@import "assets/scss/_variable.scss";
+$container:1200px;
+$link: $ggcBlue800;
+$bg: $ggcGrey50;
+$border: $ggcGrey200;
+$color-text-light: $ggcGrey300;
+
+/* ==========================================================================
+   Foundation 
+   ========================================================================== */
+@import "scss/foundation/_foundation.scss";
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+/*---------------------------------------------------------------------
+# Header
+-----------------------------------------------------------------------*/
+@import "scss/layout/_header.scss";
+@import "scss/layout/_navigation.scss";
+
+/*---------------------------------------------------------------------
+# Main
+-----------------------------------------------------------------------*/
+@import "scss/layout/_main.scss";
+
+/*---------------------------------------------------------------------
+# Sideber
+-----------------------------------------------------------------------*/
+@import "scss/layout/_sidebar.scss";
+
+
+/*---------------------------------------------------------------------
+# Footer
+-----------------------------------------------------------------------*/
+@import "scss/layout/_footer.scss";
+
+
+/* ==========================================================================
+   Object
+   ========================================================================== */
+/*---------------------------------------------------------------------
+# Component 
+-----------------------------------------------------------------------*/
+@import "scss/object/component/_component.scss";
+
+/*---------------------------------------------------------------------
+# Project 
+-----------------------------------------------------------------------*/
+@import "scss/object/project/_project.scss";
+
+
+/*---------------------------------------------------------------------
+# Utility 
+-----------------------------------------------------------------------*/
+@import "scss/object/utility/_s.scss";
+@import "scss/object/utility/_post.scss";
+@import "scss/object/utility/_utility.scss";
+@import "assets/scss/_module.scss";
+

@@ -1,0 +1,57 @@
+/* SASS Variables */
+
+/* Background colors */
+$bg:#F1F1F1;
+$contentBg:#F6F6F6;
+
+$text: #222;
+$link: #66CC99;
+$hover: #FF6600;
+$btn: #f5f5f5;
+
+$border: #797979;
+$selection: #333;
+
+//Select Color
+////////////////////////////////////
+$main:$link;
+$accent:$link;
+
+
+
+// Grays
+////////////////////////////////////
+$black:                 #000;
+$grayDarker:            #222;
+$grayDark:              #333;
+$gray:                  #555;
+$grayLight:             #999;
+$grayLighter:           #eee;
+$grayLightest:          #F0F0F0;
+$white:                 #fff;
+
+// Other colors
+////////////////////////////////////
+$blue:                  #049cdb;
+$blueDark:              #0064cd;
+$green:                 #46a546;
+$red:                   #9d261d;
+$yellow:                #ffc40d;
+$orange:                #f89406;
+$pink:                  #c3325f;
+$purple:                #7a43b6;
+@import "_ggc_palette.scss";
+
+// Font Size
+////////////////////////////////////
+$fontXlrg:1.8rem;
+$fontLrg:1.4rem;
+$fontNml:1.0rem;
+$fontSml:0.8rem;
+$fontXsml:0.5rem;
+
+
+//Other
+// -------------------------
+$container:960px;
+$brk:480px;

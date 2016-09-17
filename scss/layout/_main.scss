@@ -1,0 +1,129 @@
+.site-content{
+  @include cnt-max-container-center($container);
+  @include outer-container($container);
+}
+.content-area{
+  margin-top: 30px;
+  @include media ($brk){
+    @include span-columns(8);
+  }
+}
+
+.site-main{
+  @include media (max-width $brk){
+    @include MXsideSpace;
+  }
+}
+.single,.page{
+  .site-content{
+    max-width: 100%;
+  }
+  .content-area{
+    max-width: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+
+}
+.single_column{
+  .site-main{
+    @include cnt-max-container-center(800px);
+  }
+}
+.entry-meta,.entry-footer{
+  font-size: 0.8rem;
+}
+.entry-meta{
+  color: $color-text-light;
+  a{color: $color-text-light;}  
+
+}
+
+.more-link{
+  text-align: center;
+  @include margin(25px null);
+  a{
+    background: $link;
+    padding: 5px;
+    display: block;
+    color: #FFF;
+  }
+}//.more-link
+.entry-content{
+  @extend .u-clearfix;
+  p:last-child{
+    margin-bottom: 0;
+  }
+}
+.entry-title{
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* pager
+   ----------------------------------------------------------------- */
+.nav-links{
+  //_s用のページャー
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+  width: 100%;
+  padding: 3%;
+  background: $ggcGrey50;
+  font-size: 0.9rem;
+  .nav-previous,.nav-next{
+    //display: table-cell;
+    //table-layout: fixed;
+  }
+  .nav-previous{
+    text-align: left;
+    &:before{
+      content: '\f053';
+      font-family: FontAwesome;
+      margin-right: 1rem;
+    }
+  }
+  .nav-next{
+    text-align: right;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid $border;
+    &:after{
+      content: '\f054';
+      font-family: FontAwesome;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.posts-navigation{
+  &:before{
+    content: '';
+    clear: both;
+    @extend .u-clearfix;
+  }
+}
+
+/* comment
+   ----------------------------------------------------------------- */
+.comments-area{
+  @include MXcontent_wrap;
+  margin-bottom: 30px;
+}
+
+/* Noimage
+   ----------------------------------------------------------------- */
+.no-image {
+  padding: 28.5% 0 28.5% 0;
+  background: $ggcBlueGrey400;
+}
+.no-image:before {
+  text-align: center;
+  content: "No Image";
+  display: block;
+  color: #FFF;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}

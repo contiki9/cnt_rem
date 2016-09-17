@@ -1,0 +1,58 @@
+.footer-widget {
+  background: $ggcGrey100;
+  @include pad;
+  .widget-area-in {
+    @include cnt-max-container-center($container);
+    @include outer-container;
+  }
+  .widget {
+    @include span-columns(3);
+    @include omega(4n);
+    ul {
+      max-height: 400px;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        overflow: hidden;
+        width: 5px;
+        background: #eee;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+      }
+      &::-webkit-scrollbar:horizontal {
+        height: 5px;
+      }
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+      &::-webkit-scrollbar-piece {
+        background: #eee;
+      }
+      &::-webkit-scrollbar-piece:start {
+        background: #eee;
+      }
+      &::-webkit-scrollbar-thumb {
+        overflow: hidden;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        background: #333;
+      }
+      &::-webkit-scrollbar-corner {
+        overflow: hidden;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        background: #333;
+      }
+    }
+  }
+}
+
+.site-footer {
+  @include padding(1rem null);
+  text-align: center;
+  background: $ggcGrey800;
+  color: #FFF;
+  font-size: 0.8rem;
+  a {
+    color: #FFF;
+  }
+}

@@ -1,0 +1,20 @@
+.widget-area{
+  border-left: 1px solid $border;
+  padding: 10px 0 ;
+  @include media ($brk){
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .widget-area-in{
+    padding: 20px;
+    background: $bg;
+  }
+
+  @include media ($brk){
+    @include span-columns(4);
+  }
+
+  @include media (max-width $brk){
+    @include MXsideSpace;
+  }
+}

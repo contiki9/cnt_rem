@@ -1,0 +1,52 @@
+.site-header{
+  //background: $bg;
+  position: relative;
+  z-index: 0;
+  .site-branding{
+    overflow: hidden;
+    text-align: center;
+  }
+  .site-title{
+    margin-top: 2rem;
+    @include cnt-font-size(30);
+  }
+
+}
+
+.site-branding,.main-navigation .menu{
+  @include cnt-max-container-center($container);
+  @include media (max-width $brk){
+    @include MXsideSpace;
+  }
+}
+
+
+.custom_header{
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  .site-description,.site-title{
+    color: #FFF;
+    a{color: #FFF;}
+  }
+  .site-branding{
+    padding-top: 6em;
+    margin-bottom: 6em;
+  }
+  .site-title{
+    margin-bottom: 0;
+  }
+  .bg-alpha{
+    position: absolute;
+    padding: 20px 10px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top:0;
+    z-index: -1;
+  }
+  .main-navigation{
+    background: rgba(255,255,255,0.8);
+  }
+}

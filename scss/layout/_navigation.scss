@@ -1,0 +1,108 @@
+
+/* navigation
+   ----------------------------------------------------------------- */
+.menu-toggle{
+  //スマホ用のボタン
+  float: right;
+  margin-top: 10px;
+  &.toggled{
+    @include cnt-opacity(0.3);
+  }
+}
+
+//ナビゲーション
+.main-navigation {
+  font-size: 0.9rem;
+  &:after{
+    content: '';
+    clear: both;
+  }
+  @include media ($brk){
+    position: relative;
+    //float: left;
+    width: 100%;
+    display: block;
+    clear: both;
+    text-transform: uppercase;
+  }
+  .menu{
+    //min-height: 4rem;
+      ul  > li{
+      margin-bottom: 0;
+    }
+  }
+  @include media (max-width $brk){
+    .menu{
+      display: none;
+      margin-bottom: 30px;
+      .page_item_has_children a,.page_item a{
+        border-bottom: 1px solid $ggcGrey200;
+      }
+      .page_item{
+        margin-bottom: 0;
+      }
+    }
+    &.toggled{
+      .menu{
+        display: block;
+      }
+    }
+    .children{
+      li{
+        padding-left: 1em;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  li {
+    @include media ($brk){
+      float: left;
+      position: relative;
+    }
+  }
+  a {
+    display: block;
+    padding: 1.3em 1em;
+    text-decoration: none;
+    line-height: 1.3em;
+  }
+  ul ul {
+    @include media ($brk){
+      float: left;
+      position: absolute;
+      left: -999em;
+      z-index: 99999;
+      ul {
+        left: -999em;
+        top: 0;
+      }
+      a {
+        width: 200px;
+      }
+    }
+  }
+  li:hover > a {
+
+  }
+  ul {
+    ul a:hover {
+    }
+    li:hover > ul {
+      left: auto;
+    }
+    ul li:hover > ul {
+      left: 100%;
+    }
+  }
+  .current_page_item > a, .current-menu-item > a, .current_page_item > a:hover, .current-menu-item > a:hover {
+    @include cnt-opacity(0.3);
+  }
+  .current_page_ancestor {
+  }
+  ul ul .current_page_parent, .current_page_parent .current_page_item > a {
+  }
+}//.main-navigation

@@ -1,0 +1,28 @@
+//single&pages
+//////////////////////////////////////////////
+.p-single-post,.p-page-post{
+  .post-title{
+    text-align: center;
+    background: $link;
+    color: #FFF;
+    @include padding(20px null);
+    @include media ($brk){
+      @include padding(60px null 100px);
+    }
+  }
+  .entry-title{
+    color: #FFF;
+    font-size: 1.5rem;
+  }
+  .post-thum-wrap{
+    margin-top: -40px;
+    img{width: 100%;}
+  }
+}
+.p-page-post{
+  .entry-footer{
+    margin-top: 0;
+    padding-top: 0;
+    border: none;
+  }
+}

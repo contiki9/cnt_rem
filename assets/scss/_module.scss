@@ -1,0 +1,339 @@
+
+
+
+
+/*---------------------------------------------------------------------
+# RESET
+-----------------------------------------------------------------------*/
+.u-reset-wrap{margin: 0;padding: 0;overflow: hidden;}
+.u-reset{margin: 0;padding: 0;}
+.u-reset-lh,.u-lh0{line-height: 0;}
+.u-no-list{list-style: none;}
+.u-lh1{line-height: 1;}
+.u-lh-nomal{line-height: 1.5em;}
+.u-bg-none{background: none;}
+.u-w-auto{width: auto}
+
+.u-bold{font-weight: bold;}
+.u-ovh{overflow: hidden;}
+@include media (max-width $brk){
+  .u-sp-hidden{
+    display: none;
+  }
+}
+@include media ($brk){
+  .u-pc-hidden{
+    display: none;
+  }
+}
+
+
+/*---------------------------------------------------------------------
+# LAYOUT
+-----------------------------------------------------------------------*/
+/* LAYOUT
+   ---------------------------------------------------------- */
+.u-d-table{display: table;}
+.u-table-midlle{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.u-table-fix{
+  display: table;
+  table-layout: fixed;
+  width:100%;
+  li{
+    display:table-cell;
+    vertical-align:middle;
+  }
+}
+
+.u-table-lyt{
+  display: table-row-group;
+  dl{
+    display: table-row;
+    margin: 0;
+    dt,
+    dd{
+      display: table-cell;
+    }
+  }
+}
+
+.u-t-center{text-align: center;}
+.u-t-left{text-align: left;}
+.u-t-right{text-align: right;}
+
+.u-fl-list{
+  overflow: hidden;
+  list-style: none;
+  li{
+    float: left;
+  }
+}
+.u-fl-left{float: left;}
+.u-fl-right{float: right;}
+
+.u-pointer{cursor:pointer;}
+
+
+.u-relative,pos-r{ position: relative;}
+.u-absolute,pos-a{position:absolute;}
+.u-fixed,pos-f{position:fixed;}
+.u-pos-left{left:0}
+.u-pos-right{right:0}
+.u-pos-top{top:0}
+.u-pos-bottom{bottom:0}
+.u-pos-center{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.u-clearfix {
+  display: block;
+  *zoom: 1;
+  &:after {
+    display: block;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    content: ".";
+  }
+}
+/* SPACE
+   ---------------------------------------------------------- */
+$margin: 15px;
+.u-m-auto{ margin-left:auto;margin-right:auto;}
+.u-m-bottom{margin-bottom: $margin;}
+.u-m-top{margin-top: $margin;}
+.u-m-left{margin-left: $margin;}
+.u-m-right{margin-right: $margin;}
+
+.u-m-0{ margin:0;}
+.u-m-bottom0{margin-bottom: 0;}
+.u-m-top0{margin-top: 0;}
+.u-m-left0{margin-left:0;}
+.u-m-right0{margin-right: 0;}
+
+$padding :15px;
+.u-p-0{padding: 0;}
+.u-p-bottom{padding-bottom: $padding;}
+.u-p-top{padding-top: $padding;}
+.u-p-left{padding-left: $padding;}
+.u-p-right{padding-right: $padding;}
+
+$space :15px;
+.u-m-space{margin:$space;}
+.u-p-space{padding:$space;}
+
+.u-side-space{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* BORDER
+   ---------------------------------------------------------- */
+.u-border{border: 1px solid $border;}
+.u-border-top{border-top: 1px solid $border;}
+.u-border-bottom{border-bottom: 1px solid $border;}
+.u-border-left{border-left: 1px solid $border;}
+.u-border-radiusright{border-right: 1px solid $border;}
+
+.u-border-bold{border: 2px solid $border;}
+.u-border-bold-top{border-top: 2px solid $border;}
+.u-border-bold-bottom{border-bottom: 2px solid $border;}
+.u-border-bold-left{border-left: 2px solid $border;}
+.u-border-bold-right{border-right: 2px solid $border;}
+
+/* FONTS
+   ---------------------------------------------------------- */
+.u-font-xxlrg{font-size: $fontXlrg*1.5;}
+.u-font-xlrg{font-size: $fontXlrg;}
+.u-font-lrg{font-size: $fontLrg;}
+.u-font-nml{font-size: $fontNml;}
+.u-font-sml{font-size: $fontSml;}
+.u-font-xsml{font-size: $fontXsml;}
+.u-font-xxsml{font-size: $fontXsml*1.5;}
+
+.u-web_font{font-family: 'Inika', serif;}
+
+/* OTHER
+   ---------------------------------------------------------- */
+.u-img-w100,.u-w100{width: 100%;}
+.u-img-wmax{max-width: 100%;}
+
+.u-inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.u-ellipsis {
+  white-space: nowrap;
+  -webkit-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.u-indent{text-indent: 1rem; padding-left: -1rem;}
+.u-notes{
+  font-size: $fontXsml;
+  line-height: 1.3em;
+  color: $gray;
+  > li{@extend .u-indent;}
+}
+
+.u-hover:hover,
+.u-hover:hover img {
+  filter:alpha(opacity=80);
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+/*---------------------------------------------------------------------
+# COLOR
+-----------------------------------------------------------------------*/
+/* TEXT
+   ---------------------------------------------------------- */
+.u-text-main,
+.u-text-main a{
+  color: $main;
+  &:hover{
+    color: $main;
+  }
+}
+.u-text-accent,
+.u-text-accent a{
+  color: $accent;
+  &:hover{
+    color: $accent;
+  }
+}
+.u-text-notice,
+.u-text-notice a{
+  color: $red;
+  &:hover{
+    color: $red;
+  }
+}
+
+.u-text-black{
+  color: $black;
+  a,a:hover{
+    color: $black;
+  }
+}
+.u-text-white{
+  color: $white;
+  a,a:hover{
+    color: $white;
+  }
+}
+.u-text-white{
+  color: $white;
+  a,a:hover{
+    color: $white;
+  }
+}
+.u-text-gray-light{
+  color: $grayLight;
+  a,a:hover{
+    color: $grayLight;
+  }
+}
+.u-text-gray{
+  color: $gray;
+  a,a:hover{
+    color: $gray;
+  }
+}
+.u-text-blue{
+  color: $blue;
+  a,a:hover{
+    color: $blue;
+  }
+}
+.u-text-green{
+  color: $green;
+  a,a:hover{
+    color: $green;
+  }
+}
+.u-text-red{
+  color: $red;
+  a,a:hover{
+    color: $red;
+  }
+}
+.u-text-yellow{
+  color: $yellow;
+  a,a:hover{
+    color: $yellow;
+  }
+}
+.u-text-orange{
+  color: $orange;
+  a,a:hover{
+    color: $orange;
+  }
+}
+.u-text-pink{
+  color: $pink;
+  a,a:hover{
+    color: $pink;
+  }
+}
+.u-text-purple{
+  color: $purple;
+  a,a:hover{
+    color: $purple;
+  }
+}
+
+/* BACKGROUND
+   ---------------------------------------------------------- */
+.u-bg-color{
+  background: $link;
+}
+.u-bg-main{
+  background: $main;
+}
+.u-bg-accent{
+  background: $accent;
+}
+
+.u-bg-black{
+  background: $white;
+  @extend .u-text-white;
+}
+.u-bg-white{
+  background: $white;
+  @extend .u-text-black;
+}
+.u-bg-gray{
+  background: $gray;
+}
+.u-bg-gray-light{
+  background: $grayLight;
+}
+
+/*---------------------------------------------------------------------
+# JACASCRIPT
+-----------------------------------------------------------------------*/
+
+@include media (max-width $brk){
+  .js-device-text-change:after {
+    content:attr(data-label);
+  }
+  .js-device-text-change img {
+    display:none;
+  }
+}
